@@ -135,6 +135,7 @@ func (d *Daemon) handleNewEmails(result map[int]*imap.FetchResult, headerOnly bo
 				"\nsubject:", subject,
 				"\ndate:", date.Local(),
 				"\ntexts:", texts,
+				"\nparts:", parts,
 			)
 		}
 
