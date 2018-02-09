@@ -32,7 +32,8 @@ var UniAddressParser = func() (parser *mail.AddressParser) {
 
 // GenerateMessageID generates a unique message-id.
 func GenerateMessageID(user string) string {
-	return fmt.Sprintf("<%s-%s>", uuid.NewV4().String(), user)
+	u4, _ := uuid.NewV4()
+	return fmt.Sprintf("<%s-%s>", u4.String(), user)
 }
 
 // BuildMail combines header and body part into email payload.
